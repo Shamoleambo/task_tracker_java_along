@@ -61,4 +61,9 @@ public class Task {
     public Status getStatus() {
         return status;
     }
+
+    @Override
+    public String toString() {
+        return "id: " + id.strip() + ", description: " + description.strip() + ", status: " + status.toString();
+    }
 }
