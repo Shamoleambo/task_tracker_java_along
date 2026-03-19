@@ -12,6 +12,10 @@ public class Task {
         this.status = Status.NOT_DONE;
     }
 
+    public String getId() {
+        return this.id;
+    }
+
     public void markInProgress() {
         this.status = Status.IN_PROGRESS;
     }
