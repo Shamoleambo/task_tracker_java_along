@@ -57,4 +57,8 @@ public class Task {
 
         return task;
     }
+
+    public Status getStatus() {
+        return status;
+    }
 }
