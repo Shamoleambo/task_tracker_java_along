@@ -65,6 +65,19 @@ public class TaskTracker {
         this.tasks.add(task);
     }
 
+    //I want to test this in the future:
+        /*  If I retrieve some class instance inside of an ArrayList, do some modifications, than
+            try to add it back in the ArrayList is it going to add as a new object, like an
+            append? Or is it going to update the current object? Because in the code below
+            it seems to update the current object.
+
+                TEST IT LATER   */
+
+    public void updateTask(String id, String newDescription) {
+        Task task = this.findTask(id);
+        tasks.add(task);
+    }
+
     public Task findTask(String id) throws IllegalArgumentException {
         for (Task task : this.tasks) {
             if (task.getId().equals(id)) return task;
