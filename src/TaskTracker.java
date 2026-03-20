@@ -7,7 +7,7 @@ import java.util.List;
 public class TaskTracker {
 
     //I don't know what to pass on to this Path.of() method, so I'm gonna leave it like this for now and make some tests
-    private final Path FILE_PATH = Path.of("./");
+    private final Path FILE_PATH = Path.of("./temp_name.json");
     private List<Task> tasks;
 
     public TaskTracker() {
@@ -58,5 +58,10 @@ public class TaskTracker {
 
         String jsonContent = sb.toString();
         Files.writeString(FILE_PATH, jsonContent);
+    }
+
+    public void addTask(String description) {
+        Task task = new Task(description);
+        this.tasks.add(task);
     }
 }
