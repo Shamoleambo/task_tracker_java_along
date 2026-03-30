@@ -70,6 +70,11 @@ public class TaskTracker {
         task.updateDescription(newDescription);
     }
 
+    public void deleteTask(String id) {
+        Task task = findTask(id);
+        this.tasks.remove(task);
+    }
+
     public Task findTask(String id) throws IllegalArgumentException {
         for (Task task : this.tasks) {
             if (task.getId().equals(id)) return task;
