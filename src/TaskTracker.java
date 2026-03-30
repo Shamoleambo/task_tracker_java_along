@@ -80,6 +80,11 @@ public class TaskTracker {
         task.markInProgress();
     }
 
+    public void markDone(String id) {
+        Task task = this.findTask(id);
+        task.markDone();
+    }
+
     public Task findTask(String id) throws IllegalArgumentException {
         for (Task task : this.tasks) {
             if (task.getId().equals(id)) return task;
